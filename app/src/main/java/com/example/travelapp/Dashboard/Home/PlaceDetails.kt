@@ -41,12 +41,9 @@ class PlaceDetails : AppCompatActivity() {
         when (title_info.text) {
             "South Beach"->{
                 primaryImage.setImageResource(R.drawable.south_beach)
-                val videoPath = "android.resource://" + packageName + "/" + R.raw.south_beach
-                presentationVideo.setVideoURI(Uri.parse(videoPath))
+//                val videoPath = "android.resource://" + packageName + "/" + R.raw.south_beach
+//                presentationVideo.setVideoURI(Uri.parse(videoPath))
 
-                presentationVideo.setOnClickListener {
-                    presentationVideo.start()
-                }
             }
             "Swiss Alps"->{
                 primaryImage.setImageResource(R.drawable.swiss_alps)
