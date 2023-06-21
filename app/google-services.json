@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "45429238886",
+    "project_id": "expeditioner-761e8",
+    "storage_bucket": "expeditioner-761e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45429238886:android:7b70019cdefa22632f91a7",
+        "android_client_info": {
+          "package_name": "com.example.travelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45429238886-e5fe252ci7potrvc92k9uhh0db33q37m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgNAEfk7QRC7F97OIxBj2caXZCCfz72p0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45429238886-e5fe252ci7potrvc92k9uhh0db33q37m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

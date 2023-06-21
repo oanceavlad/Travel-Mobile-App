@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/custom_pink"
+    android:orientation="vertical"
+    tools:context=".PlaceDetails">
+
+    <ImageView
+        android:id="@+id/primary_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/banner"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-85dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:id="@+id/secondary_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="25dp"
+            android:elevation="40dp"
+            android:src="@drawable/lemon"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="-40dp"
+            android:backgroundTint="@color/custom_pink"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-35dp"
+            android:fontFamily="@font/autour_one"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:elevation="11dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/autour_one"
+                    android:text="Overview"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/custom_blue"
+                    android:orientation="vertical"/>
+
+                <TextView
+                    android:id="@+id/overview_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/autour_one"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="1dp"
+                    android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/autour_one"
+                    android:text="Presentation video"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/custom_blue"
+                    android:orientation="vertical"/>
+
+                <VideoView
+                    android:id="@+id/presentation_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

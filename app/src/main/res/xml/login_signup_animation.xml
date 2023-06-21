@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@id/login_cardview"
+            android:translationX="0dp">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+        </Constraint>
+
+        <Constraint android:id="@id/signup_cardview"
+            android:translationX="400dp">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                motion:layout_constraintStart_toEndOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/login_cardview"
+            android:translationX="-400dp">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintEnd_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+        </Constraint>
+
+        <Constraint android:id="@id/signup_cardview"
+            android:translationX="0dp">
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end">
+        <OnClick
+            motion:targetId="@id/to_signup" />
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/start">
+        <OnClick
+            motion:targetId="@id/to_login" />
+    </Transition>
+
+</MotionScene>
