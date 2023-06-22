@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import android.widget.ImageView
+import com.example.travelapp.Dashboard.DashboardActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +35,7 @@ class SplashScreenActivity : AppCompatActivity() {
                 animation2.addListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator?) {
                         // Redirect to login page
-                        val intent = Intent(this@SplashScreenActivity, LoginSignupActivity::class.java)
+                        val intent = Intent(this@SplashScreenActivity, DashboardActivity::class.java)
                         startActivity(intent)
                         finish()
                     }

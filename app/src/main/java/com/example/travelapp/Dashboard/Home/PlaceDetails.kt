@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.MediaController
 import android.widget.TextView
 import android.widget.VideoView
+
 import androidx.appcompat.app.AppCompatActivity
 
 class PlaceDetails : AppCompatActivity() {
@@ -25,6 +26,50 @@ class PlaceDetails : AppCompatActivity() {
         obj = intent.getParcelableExtra("place")!!
         placeImg = intent.getIntExtra("placeImage",-1)
         setData(obj, placeImg!!)
+
+        val presentationVideo = findViewById<VideoView>(R.id.presentation_video)
+        when (obj.title) {
+            "South Beach"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.south_beach
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Swiss Alps"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.swiss_alps
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Whistler Blackcomb"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.wh_blackcomb
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Pompano Beach"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.pompano_beach
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Thai Square Spa"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.thai_spa
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Waterfall Safari"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.waterfall
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Louvre Museum"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.louvre_museum
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+            "Maggie Daley Park"->{
+                val videoPath = "android.resource://" + getPackageName() + "/" + R.raw.daley_park
+                presentationVideo.setVideoURI(Uri.parse(videoPath))
+            }
+        }
+
+
+
+        val mediacontroller=MediaController(this)
+
+        presentationVideo.setMediaController(mediacontroller)
+        mediacontroller.setAnchorView(presentationVideo)
+
     }
 
     private fun setData(obj:PlaceData, placeImage:Int) {
@@ -32,7 +77,7 @@ class PlaceDetails : AppCompatActivity() {
         val overview_info = findViewById<TextView>(R.id.overview_info)
         val primaryImage = findViewById<ImageView>(R.id.primary_img)
         val secondary_img = findViewById<ImageView>(R.id.secondary_img)
-        val presentationVideo = findViewById<VideoView>(R.id.presentation_video)
+
 
         title_info.text = obj.title
         overview_info.text = obj.overview
@@ -41,9 +86,7 @@ class PlaceDetails : AppCompatActivity() {
         when (title_info.text) {
             "South Beach"->{
                 primaryImage.setImageResource(R.drawable.south_beach)
-//                val videoPath = "android.resource://" + packageName + "/" + R.raw.south_beach
-//
-//                presentationVideo.setVideoURI(Uri.parse(videoPath))
+
 
             }
             "Swiss Alps"->{
