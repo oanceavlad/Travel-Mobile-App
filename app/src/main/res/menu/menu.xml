@@ -6,8 +6,8 @@
         android:icon="@drawable/home" />
     <item
         android:id="@+id/favorites"
-        android:title="Favorites"
-        android:icon="@drawable/favorite"/>
+        android:title="Profile"
+        android:icon="@drawable/user"/>
     <item
         android:title=""
         android:enabled="false"

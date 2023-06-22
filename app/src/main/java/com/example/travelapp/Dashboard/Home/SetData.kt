@@ -9,7 +9,7 @@ object SetData {
                 1,
                 "South Beach",
                 "white sand, art",
-                "Glamorous hotels, clubs and restaurants converge in South Beach, but the American Riviera is most famous for its Art Deco vibe and two miles of white sand. Rack up Instagram likes by the 35 bright and funky lifeguard towers at one of the most popular beaches, and rent a DecoBike to explore the Art Deco Historic District’s 800 landmarks built from 1923 to 1943. Called the grand dame of Art Deco design, the Raleigh hotel has been a hot spot since 1940. ",
+                "Glamorous hotels, clubs and restaurants converge in South Beach, but the American Riviera is most famous for its Art Deco vibe and two miles of white sand. Rack up Instagram likes by the 35 bright and funky lifeguard towers at one of the most popular beaches, and rent a DecoBike to explore the Art Deco Historic District’s 800 landmarks built from 1923 to 1943. Called the grand dame of Art Deco design, the Raleigh hotel has been a hot spot since 1940.",
                 "Miami, Florida",
                 "3/5"
             )
@@ -38,7 +38,7 @@ object SetData {
             PlaceData(
                 4,
                 "Pompano Beach",
-                "fishing resort ",
+                "fishing resort",
                 "Bermuda is one of the most emblematic places in terms of sport fishing in the world; in fact, it is considered one of the best spots to fish the Blue Marlin. There are three types of fishing available to visitors: Deep Sea Fishing, Reef Fishing, and Shoreline Fishing. The latter is practiced from either a dock, beach or land.",
                 "Bermuda",
                 "4/5"

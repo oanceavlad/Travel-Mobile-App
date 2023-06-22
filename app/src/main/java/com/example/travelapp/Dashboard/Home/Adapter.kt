@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
 
 class Adapter(private var places:List<PlaceData>):RecyclerView.Adapter<Adapter.ViewHolder>() {
 
@@ -28,12 +29,13 @@ class Adapter(private var places:List<PlaceData>):RecyclerView.Adapter<Adapter.V
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var auxImage:Int? = null
+
+        var auxImage: Int? = null
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, PlaceDetails::class.java)
             intent.putExtra("place", places[position])
-            intent.putExtra("placeImage",auxImage)
+            intent.putExtra("placeImage", auxImage)
             holder.itemView.context.startActivity(intent)
         }
 
@@ -42,29 +44,29 @@ class Adapter(private var places:List<PlaceData>):RecyclerView.Adapter<Adapter.V
         holder.location.text = places[position].location
         holder.rating.text = places[position].rating
 
-        when(places[position].title!!){
-            "South Beach"->{
-                auxImage=R.drawable.lemon
+        when (places[position].title!!) {
+            "South Beach" -> {
+                auxImage = R.drawable.lemon
             }
-            "Swiss Alps"->{
+            "Swiss Alps" -> {
                 auxImage = R.drawable.mountain
             }
-            "Whistler Blackcomb"->{
+            "Whistler Blackcomb" -> {
                 auxImage = R.drawable.ski
             }
-            "Pompano Beach"->{
+            "Pompano Beach" -> {
                 auxImage = R.drawable.fishing
             }
-            "Thai Square Spa"->{
+            "Thai Square Spa" -> {
                 auxImage = R.drawable.spa
             }
-            "Waterfall Safari"->{
+            "Waterfall Safari" -> {
                 auxImage = R.drawable.ship
             }
-            "Louvre Museum"->{
+            "Louvre Museum" -> {
                 auxImage = R.drawable.museum
             }
-            "Maggie Daley Park"->{
+            "Maggie Daley Park" -> {
                 auxImage = R.drawable.skating
             }
         }
@@ -72,6 +74,5 @@ class Adapter(private var places:List<PlaceData>):RecyclerView.Adapter<Adapter.V
         if (auxImage != null) {
             holder.placeImage.setImageResource(auxImage)
         }
-
     }
 }

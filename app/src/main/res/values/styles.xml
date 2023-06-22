@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="LoginInputBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="InputBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/custom_pink</item>
         <item name="hintTextColor">@color/gray</item>
         <item name="android:windowContentTransitions">true</item>

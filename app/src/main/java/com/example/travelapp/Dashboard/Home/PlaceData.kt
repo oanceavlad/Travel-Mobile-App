@@ -1,4 +1,5 @@
 package com.example.travelapp
+
 import android.os.Parcel
 import android.os.Parcelable
 
@@ -23,8 +24,7 @@ data class PlaceData(
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeValue(id)
@@ -49,5 +49,4 @@ data class PlaceData(
             return arrayOfNulls(size)
         }
     }
-
 }

@@ -43,7 +43,7 @@ class LoginSignupActivity : AppCompatActivity() {
         // Animation
         val loginSignupAnimation = findViewById<MotionLayout>(R.id.login_signup_animation)
         // Firebase Authentication
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken("45429238886-e5fe252ci7potrvc92k9uhh0db33q37m.apps.googleusercontent.com").requestEmail().build()
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken("45429238886-e5fe252ci7potrvc92k9uhh0db33q37m.apps.googleusercontent.com").requestEmail().requestProfile().build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
         firebaseAuth = FirebaseAuth.getInstance()
         // Buttons

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
 import com.example.travelapp.Dashboard.Home.HomeFragment
-import com.example.travelapp.FavoritesFragment
+import com.example.travelapp.Dashboard.Profile.ProfileFragment
 import com.example.travelapp.LoginSignupActivity
 import com.example.travelapp.R
 import com.google.android.material.navigation.NavigationView
@@ -45,7 +45,7 @@ class DashboardActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> replaceFragment(HomeFragment())
-                R.id.favorites -> replaceFragment(FavoritesFragment())
+                R.id.favorites -> replaceFragment(ProfileFragment())
                 R.id.logout -> logoutUser(firebaseAuth)
             }
 
